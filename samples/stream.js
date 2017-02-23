@@ -15,7 +15,7 @@ transformer.on('readable', function(){
 transformer.on('error', function(err){
   console.log(err.message);
 });
-transformer.on('finish', function(){
+transformer.on('end', function(){
   output.should.eql([ [ '2', '3', '4', '1' ], [ 'b', 'c', 'd', 'a' ] ]);
 });
 transformer.write(['1','2','3','4']);
